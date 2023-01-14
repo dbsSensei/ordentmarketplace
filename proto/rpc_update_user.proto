@@ -1,0 +1,19 @@
+ syntax = "proto3";
+
+package pb;
+
+import "user.proto";
+
+option go_package = "github.com/dbssensei/ordent-marketplace/pb";
+
+message UpdateUserRequest {
+    int32 id = 1;
+    optional string email = 2;
+    optional string full_name = 3;
+    optional string country_code = 4;
+    optional string password = 5;
+}
+
+message UpdateUserResponse {
+    User user = 1;
+}

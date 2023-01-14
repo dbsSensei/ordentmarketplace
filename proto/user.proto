@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/dbssensei/ordent-marketplace/pb";
+
+message User {
+    string id = 1;
+    string email = 2;
+    string full_name = 3;
+    string country_code = 4;
+    google.protobuf.Timestamp password_changed_at = 5;
+    google.protobuf.Timestamp created_at = 6;
+}
